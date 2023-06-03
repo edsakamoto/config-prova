@@ -7,13 +7,13 @@ spring:
 #        - name: LogFilter
       routes:
         - id: movieRoute
-          uri: lb://MOVIE-SERVICE
+          uri: lb://movie-service
           predicates:
             - Path=/movie/**
 #           filters:
 #            - name: SubscriptionFilter
         - id: catalogRoute
-          uri: lb://CATALOG-SERVICE
+          uri: lb://catalog-service
           predicates:
             - Path=/catalog/**
 #          filters:
